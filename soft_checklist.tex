@@ -1,0 +1,293 @@
+
+\documentclass{article}
+\usepackage[english]{babel}
+\usepackage[margin=0.6in]{geometry}
+
+\begin{document}
+\section{Problem Analysis and Validation}
+\begin{center}
+    \begin{tabular}{ | p{.25cm} || p{10cm} |}
+    \hline
+     & Description \\ \hline
+     & Are the requirements stable and has the entire team agreed to them? \\ \hline
+     & How frequently is the system expected to adapt to change? \\ \hline
+     & How quickly are changes expected to be deployed? Hot patching? Long Q/A? etc.  \\ \hline
+     & What are the clear "unknowns" that require research? \\ \hline
+     & What is the benefit of the requirement/outcome to the stakeholder: critical, important, useful? \\ \hline
+     & Have all tactical objectives and constraints been specified with clear goals and go/no-go marks? \\ \hline
+     & What risks need to be mitigated: performance, availability, adaptability, modifiability, security? \\ \hline
+     & Must the system respond within a specific time window? \\ \hline
+     & Must the system handle a certain number of concurrent requests? \\ \hline
+     & Must the system handle a certain size or type of payload data? \\ \hline
+     & Are there any other performance benchmarks that need to be achieved for success (PageSpeed, YSlow, Grinder)? \\ \hline
+     & Have all performance sensitivities been specified? eg: Throughput, Real-time response, recovery time? \\ \hline
+     & Is there a need for encryption? What needs to be encrypted, when, and to what degree? \\ \hline
+     & Are there any additional security guidelines or policies needed for the feature? \\ \hline
+     & Does the system need to distinguish different roles or permissions across users? \\ \hline
+     & Does the system need to audit itself on transactions? Do any invariants need to be checked and enforced during runtime? \\ \hline
+     & For all mission-critical features, were availability benchmarks explicitly defined? \\ \hline
+     & Are there any extra constraints the developers want to place on the system? \\ \hline
+     & Were quality attributes extracted by analyzing what constitutes a system failure? \\ \hline
+     & Have all risks and quality attributes been ordered or prioritized? \\ \hline
+     & Were sound validation methods used to elicit the specification? \\ \hline
+     & Was the appropriate data/research used to support the specification? \\ \hline
+     & Was the user experience validated with user interviews? \\ \hline
+     & Is the data from user input and user interviews conclusive? \\ \hline
+     & Is there a process or point-of-contact for further specifying incomplete specifications discovered later in the project? \\ \hline
+     & Was the data architecture, data collection, and data points for the feature/requirement identified and specified? \\ \hline
+     & Was a business-level "success" metric defined with a clear threshold identified, supported with objective data? \\ \hline
+     & Were all the data architecture and system architecture changes reviewed by more than one person, documented, and aligned with the project's quality attributes? \\ \hline
+     & All guards, pre/post conditions, and invariants for loops and classes/data have been specified and captured in tests? \\ \hline
+     & Where possible, was an FSM is used to describe and model the feature/requirement? \\ \hline
+     & Are all external interfaces known? \\ \hline
+    \end{tabular}
+\end{center}
+
+
+
+\section{Planning and Estimation}
+
+\begin{center}
+    \begin{tabular}{ | p{.25cm} || p{10cm} |}
+    \hline
+     & Description \\ \hline
+     & Have the specifications been analyzed for completeness? \\ \hline
+     & Have incomplete specifications been noted and more details requested? \\ \hline
+     & Have all input points and trust boundaries been identified? \\ \hline
+     & Is there a list of possible malicious user input? \\ \hline
+     & Is there a strategy for handling malicious input when it is detected? \\ \hline
+     & Is the system size and complexity a concern? \\ \hline
+     & What "unknowns" or technologies need to be carefully managed? \\ \hline
+     & Do we need to hire a specialty contractor or to learn a new skill? \\ \hline
+     & Given the risks, how much architecture is needed? \\ \hline
+     & How do you determine the feasibility of algorithms and designs? eg: Prototyping, Modeling, Analysis, Simulation  \\ \hline
+     & What benching infrastructure do you need in place to ensure success? Does it need to be built? \\ \hline
+     & Have multiple engineers decomposed the problem? \\ \hline
+     & Have multiple engineers crafted/influenced/reviewed/approved the potential API changes? \\ \hline
+     & If needed, have estimations been generated using democratic, bottom-up techniques? \\ \hline
+     & If needed, have estimations been generated using data and top-down techniques? \\ \hline
+     & Have tickets been created for all foreseeable pieces of work and assigned to a developer? \\ \hline
+     & Have the tickets noted the impact to the Stakeholder? High, Medium, or Low \\ \hline
+     & Have all engineers voiced their biggest concern or worry with the requirements/proposed feature? \\ \hline
+     & Are all deliverables and milestones clearly defined, understood, and agreed to by the team? \\ \hline
+     & Do all team-members understand their roles and responsibilities? \\ \hline
+     & Do all high-risk areas already have a pairing strategy/team identified? \\ \hline
+     & Do all high-risk areas have at least a loosely defined alternative plan? \\ \hline
+     & If a schedule exist, is the schedule realistic? \\ \hline
+     & Are there external dependencies which are likely to impact the schedule? \\ \hline
+     & Is this a replacement for an existing system? If so, is there a plan for data migration and switching control over? \\ \hline
+    \end{tabular}
+\end{center}
+
+
+
+\section{Architecture}
+
+\begin{center}
+    \begin{tabular}{ | p{.25cm} || p{10cm} |}
+    \hline
+     & Description \\ \hline
+     & What is the expected lifespan of the system? \\ \hline
+     & Will the system need to respond to technological changes over time, such as new versions of Middleware, APIs, or other products? \\ \hline
+     & What is the architectural impact? None, extends, modifies \\ \hline
+     & What changes can we anticipate in the future, and how can we make them easier to accommodate? \\ \hline
+     & Is the architecture adequately designed to age and evolve gracefully? \\ \hline
+     & Does the architecture consider constraints and restrictions imposed by the physical deployment environment? \\ \hline
+     & Have all needs for clustering, sharding, caching, offloading been specified and modeled appropriately? \\ \hline
+     & Are all DB/data interactions split against CRUD operations and organized by resource? \\ \hline
+     & Do all introduced services/processes have dedicated monitoring? \\ \hline
+     & Are there any updates needed for system monitors or visibility? \\ \hline
+     & Is there an appropriate capacity plan for the new feature? \\ \hline
+     & Is there graceful degradation of the service? \\ \hline
+     & Have appropriate failover strategies been built in to the system? \\ \hline
+     & Are all technical risks mitigated or addressed in a contingency plan? \\ \hline
+     & Is availability accounted for with the architecture? \\ \hline
+     & Does the new service have integrated logging?  Is it configurable? \\ \hline
+     & Is the system and its components isolated appropriately from outside concerns? \\ \hline
+     & Are behaviors asynchronous at a macro/system level? \\ \hline
+     & Have all deployment environments been identified? DB servers, API servers, web machines, load balancers, etc \\ \hline
+     & Is the description of the architecture complete, meaningful, and clear? \\ \hline
+     & Is the architecture an  appropriate level of detail, given the objectives, risk, and impact? \\ \hline
+     & Does the architecture clearly convey not only the solution but also the motivation and objectives related to the decisions that have been made in shaping the architecture? \\ \hline
+     & Have the architectural goals been clearly described? \\ \hline
+     & Have architectural patterns and styles been clearly noted? \\ \hline
+     & Has the architecture been appropriately partitioned to reduce complexity and risk? \\ \hline
+     & Are the architectural partitions all loosely coupled and highly cohesive? \\ \hline
+     & Where possible, does the architecture promote a "share-nothing" design? \\ \hline
+     & Are all interfaces to components well-defined? \\ \hline
+     & Is the architecture free of single points of failure? \\ \hline
+     & Do all models include a legend? \\ \hline
+     & Are the models accurate: self consistent, free of dangling references, and falsifiable? \\ \hline
+     & Are the models' precision such that stakeholders can understand it enough to identify flaws/provide feedback? \\ \hline
+     & Can the team deliver the architecture? \\ \hline
+    \end{tabular}
+\end{center}
+
+
+
+\section{Data}
+
+\begin{center}
+    \begin{tabular}{ | p{.25cm} || p{10cm} |}
+    \hline
+     & Description \\ \hline
+     & Is all necessary data accurately/appropriately captured for the feature? \\ \hline
+     & Have all BI and report requests been vetted by the data model? \\ \hline
+     & Is the data model flexible enough to accommodate new BI requests or data reports? \\ \hline
+     & Have hard validation rules been created for type, length, format, and range of fields? \\ \hline
+     & Is there any new data that can enhance old data or previous features? \\ \hline
+     & What sort of learning are you aiming to do with the data? What is the goal of this learning? \\ \hline
+     & What process is needed to clean or scrub the data? \\ \hline
+     & Is there any need for an external data set? \\ \hline
+     & Is there an understanding of what pieces of data are cacheable? \\ \hline
+     & Is there a general caching strategy in place? \\ \hline
+     & Is there a separation between data that needs to always be accurate vs. data that can be "good-enough" and eventually accurate? \\ \hline
+    \end{tabular}
+\end{center}
+
+
+\section{User Experience}
+
+\begin{center}
+    \begin{tabular}{ | p{.25cm} || p{10cm} |}
+    \hline
+     & Description \\ \hline
+     & Nielsen's heuristics are used as a baseline for UI/UX go/no-go. \\ \hline
+     & Additional guidelines are specified as part of the UI/UX/Spec elicitation process, determined by a product leader. \\ \hline
+    \end{tabular}
+\end{center}
+
+
+
+\section{Managerial and Resources}
+
+\begin{center}
+    \begin{tabular}{ | p{.25cm} || p{10cm} |}
+    \hline
+     & Description \\ \hline
+     & Is there a need for new hardware resources to reduce the scope or deliver the feature? \\ \hline
+     & Is there a need for a new software? eg: framework, tool, etc \\ \hline
+     & Is the budget capable of accommodating required resources? \\ \hline
+     & Are there appropriate controls to acquire resources in case of an emergency? \\ \hline
+    \end{tabular}
+\end{center}
+
+
+
+\section{Construction}
+
+\begin{center}
+    \begin{tabular}{ | p{.25cm} || p{10cm} |}
+    \hline
+     & Description \\ \hline
+     & There are no magic numbers in the code \\ \hline
+     & There is appropriate use of namespacing \\ \hline
+     & Module interaction is programmed against an interface and never to an implementation \\ \hline
+     & The code is self-evident and architecturally-evident \\ \hline
+     & Conditional If statements are avoided in favor of polymorphic dispatch \\ \hline
+     & I/O is isolated in a function call, and separated from the function call that constructs/processes the payload \\ \hline
+     & Has input validation been applied for all outside user input? \\ \hline
+     & Is all input validation done in a central location when it makes sense (to encourage reuse)? \\ \hline
+     & Does the validation address injection, XSS, CSRF, and hijacking concerns? \\ \hline
+     & Is the design free of client-side/untrusted validation? \\ \hline
+     & Has all user input been assumed malicious into the system? \\ \hline
+     & The validation approach is to constrain, reject, and then sanitize input. Looking for known, valid, and safe input is much easier than looking for known malicious or dangerous input.\\ \hline
+     & All input parameters are validated, including form fields, query strings, cookies, and HTTP headers \\ \hline
+     & HTTP header information is not relied on to make security decisions \\ \hline
+     & Input file names and file paths are avoided where possible \\ \hline
+     & Application trust and authentication boundaries are clearly defined, documented, and enforced \\ \hline
+     & Authentication identities and roles are clearly defined, documented, and enforced \\ \hline
+     & SQL/DB authentication is used \\ \hline
+     & The DB is not listening to an external IP connection, or is isolated within a network \\ \hline
+     & The design adopts a policy of using least-privileged accounts \\ \hline
+     & Authentication tickets (cookies) are not transmitted over non-encrypted connections \\ \hline
+     & The session cookie is http-only \\ \hline
+     & CSRF cookie protection is in a dedicated cookie, separate from the session cookie \\ \hline
+     & The application's login does not have permissions to access tables directly \\ \hline
+     & Access to system level resources is restricted \\ \hline
+     & Configuration secrets are not held in plain text in configuration files \\ \hline
+     & Configuration stores are secured \\ \hline
+    \end{tabular}
+\end{center}
+
+\section{Construction; con't.}
+
+\begin{center}
+    \begin{tabular}{ | p{.25cm} || p{10cm} |}
+    \hline
+     & Description \\ \hline
+     & Secrets are not stored unless necessary. Alternate methods have been explored at design time \\ \hline
+     & Secrets are not stored in code \\ \hline
+     & Sensitive data is not logged in clear text by the application \\ \hline
+     & Sensitive data is not stored in persistent cookies \\ \hline
+     & Sensitive data is not transmitted with the GET protocol \\ \hline
+     & SSL is used to protect authentication cookies \\ \hline
+     & The contents of authentication cookies are encrypted \\ \hline
+     & Session lifetime is limited \\ \hline
+     & Session identifiers are not passed in query strings \\ \hline
+     & No encryption is weaker then SHA256 \\ \hline
+     & Password encryption makes us of advance methods like bcrypt \\ \hline
+     & Platform-level cryptography is used and it has no custom implementations \\ \hline
+     & Keys are periodically recycled \\ \hline
+     & When needed, view state is protected using MACs \\ \hline
+     & Application errors are logged to the error log \\ \hline
+     & An appropriate approach to exceptional handling is used \\ \hline
+     & Software design patterns have been appropriately used and clearly noted \\ \hline
+     & State is avoided when possible \\ \hline
+     & Higher-order functions are used when possible \\ \hline
+     & Composition is favored over inheritance \\ \hline
+     & Immutability is favored where possible \\ \hline
+     & Handling a request is modeled as applying transformations to a given set of data \\ \hline
+    \end{tabular}
+\end{center}
+
+
+
+\section{Quality Assurance}
+
+\begin{center}
+    \begin{tabular}{ | p{.25cm} || p{10cm} |}
+    \hline
+     & Description \\ \hline
+     & Was SeleniumIDE plugin used to capture all manual tests that couldn't be captured otherwise? \\ \hline
+     & Are all tests under revision control? \\ \hline
+     & Is there an established dataset used for testing? \\ \hline
+     & Were all internal interfaces tested with XUnit frameworks? \\ \hline
+     & Was the code analyzed with a lint/quality static checker tool? \\ \hline
+     & Was the code appropriately documented and organized based on resource, action, or some other classification? \\ \hline
+     & Has more than one engineer seen, ran, and approved the new code and tests? \\ \hline
+     & Have all internal and external integration points been exercised with tests? (via pair-wise or another method) \\ \hline
+     & Has the system successfully run in staging? \\ \hline
+     & Has the entire company seen a demo of the feature in staging and approved it? \\ \hline
+     & All internal and external interfaces are properly documented and make use of descriptive variable names \\ \hline
+     & All public API calls have an ideal example code prior to launch \\ \hline
+     & Have all architectural goals been met? \\ \hline
+    \end{tabular}
+\end{center}
+
+
+
+\section{Deployment}
+
+\begin{center}
+    \begin{tabular}{ | p{.25cm} || p{10cm} |}
+    \hline
+     & Description \\ \hline
+     & Has static content been placed on the CDN? \\ \hline
+     & Have optimal builds been automatically generated for deployment? \\ \hline
+     & If SSL is needed, is the CA in place and working? \\ \hline
+     & Have all deployment environments been prepared? DB servers, API servers, web machines, load balancers, etc \\ \hline
+     & If needed, have infrastructure resources been warmed (caches, JVM, etc)? \\ \hline
+     & File permissions are correctly set on deployment machines with security and necessity in mind \\ \hline
+     & No services run as root \\ \hline
+     & Least-privileged process accounts and service accounts are used \\ \hline
+     & Firewall rules are correctly set for new features \\ \hline
+     & Are all external business factors (email, branding, press release) ready fro deployment? \\ \hline
+     & Is there a single-action system rollback if something goes wrong? \\ \hline
+     & Is a systems operation team prepared to go live with the system? \\ \hline
+     & Do all engineers feel confident in the quality of the system? \\ \hline
+    \end{tabular}
+\end{center}
+
+\end{document}
+
