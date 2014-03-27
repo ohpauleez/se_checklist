@@ -16,3 +16,8 @@ While many checklists of this style [exist](http://www.ruthmalan.com/Journal/201
 
 View the [latest PDF](https://github.com/ohpauleez/se_checklist/raw/master/soft_checklist.pdf)
 
+
+## License
+
+Released under [CC 4.0 Attribution](http://creativecommons.org/licenses/by/4.0/legalcode)
+
