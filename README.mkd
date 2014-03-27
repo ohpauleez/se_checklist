@@ -1,7 +1,7 @@
 A quality/architecture checklist
 ================================
 
-Quality-attribute, risk-driven, architecture cheklists aid in delivering a higher-quality product, more efficiently, and more consistently.
+Quality-attribute, risk-driven, architecture checklists aid in delivering a higher-quality product, more efficiently, and more consistently.
 
 While many checklists of this style [exist](http://www.ruthmalan.com/Journal/2011/2011JournalFebruary.htm), most overlap and don't speak to modern (2010+) application development.
 
