@@ -5,17 +5,25 @@ Quality-attribute, risk-driven, architecture checklists aid in delivering a high
 
 While many checklists of this style [exist](http://www.ruthmalan.com/Journal/2011/2011JournalFebruary.htm), most overlap and don't speak to modern (2010+) application development.
 
-###This checklist aims to focus you and your team on:
+### This checklist aims to focus you and your team on:
 
  * Quality-attributes and risks of the high concern and greatest impact
  * Modeling and architecting only what matters most
  * Raw problem solving around the problem domain
  * Code quality and consistency
- * Project deloyment concerns
+ * Project deployment concerns
  * A security-integrated approach
 
 View the [latest PDF](https://github.com/ohpauleez/se_checklist/raw/master/soft_checklist.pdf)
 
+
+## SEMAT Kernel
+
+There is also a [SEMAT](http://semat.org/) Essence Kernel Org file, that should be used for all
+projects, regardless of their focus.  It can also be used to drive activities like
+retrospective or risk analysis.
+
+[See the kernel](./semat_essence.org)
 
 ## License
 
