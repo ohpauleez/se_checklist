@@ -25,6 +25,9 @@ retrospective or risk analysis.
 
 [See the kernel](./semat_essence.org)
 
+For more information on SEMAT and Essence, read an [introductory ACM article](http://queue.acm.org/detail.cfm?id=2389616)
+or watch the [Google Tech Talk](https://www.youtube.com/watch?v=WNlERrVxYjs).
+
 ## License
 
 Released under [CC 4.0 Attribution](http://creativecommons.org/licenses/by/4.0/legalcode)

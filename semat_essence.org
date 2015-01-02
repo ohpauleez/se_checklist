@@ -12,7 +12,8 @@
   One should setup categories within this file as desired checkpoints.
 
   Modifications have been made to the original kernel to include additional
-  focus on risks and quality attributes.
+  focus on risks and quality attributes.  An overview of Essence can be found
+  in the [[http://queue.acm.org/detail.cfm?id=2389616][ACM Overview article]].
 
 ** Customer [%]
 
